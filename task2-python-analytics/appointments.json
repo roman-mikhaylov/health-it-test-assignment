@@ -1,0 +1,46 @@
+[
+  {
+    "appointmentId": "A001",
+    "doctorName": "Иванов И.И.",
+    "specialty": "Терапевт",
+    "date": "2026-05-18",
+    "startTime": "09:00",
+    "endTime": "09:20",
+    "room": "101",
+    "patientType": "Первичный",
+    "status": "Завершён"
+  },
+  {
+    "appointmentId": "A002",
+    "doctorName": "Иванов И.И.",
+    "specialty": "Терапевт",
+    "date": "2026-05-18",
+    "startTime": "09:20",
+    "endTime": "09:40",
+    "room": "101",
+    "patientType": "Повторный",
+    "status": "Неявка"
+  },
+  {
+    "appointmentId": "A003",
+    "doctorName": "Петров П.П.",
+    "specialty": "Кардиолог",
+    "date": "2026-05-18",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "room": "202",
+    "patientType": "Первичный",
+    "status": "Завершён"
+  },
+  {
+    "appointmentId": "A004",
+    "doctorName": "Петров П.П.",
+    "specialty": "Кардиолог",
+    "date": "2026-05-19",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "room": "202",
+    "patientType": "Первичный",
+    "status": "Отменён"
+  }
+]
