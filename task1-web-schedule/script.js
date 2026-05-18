@@ -21,6 +21,29 @@ const appointments = [
     patientType: "Повторный",
     status: "Завершён"
   }
+  {
+    appointmentId: "A003",
+    doctorName: "Петров О.В.",
+    specialty: "нарколог",
+    date: "2026-05-18",
+    startTime: "10:20",
+    endTime: "10:40",
+    room: "102",
+    patientType: "Первичный",
+    status: "Отменен"
+  }
+  {
+    appointmentId: "A004",
+    doctorName: "Иванов И.И.",
+    specialty: "Терапевт",
+    date: "2026-05-18",
+    startTime: "11:20",
+    endTime: "11:40",
+    room: "102",
+    patientType: "Повторный",
+    status: "Записан"
+  }
+
 ];
 
 const doctorFilter = document.getElementById("doctorFilter");
