@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Расписание и записи пациентов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Расписание и записи пациентов</h1>
+
+  <section id="filters">
+    <label>
+      Врач:
+      <select id="doctorFilter">
+        <option value="">Все</option>
+      </select>
+    </label>
+
+    <label>
+      Дата:
+      <input type="date" id="dateFilter">
+    </label>
+
+    <label>
+      Статус:
+      <select id="statusFilter">
+        <option value="">Все</option>
+        <option value="Записан">Записан</option>
+        <option value="Завершён">Завершён</option>
+        <option value="Отменён">Отменён</option>
+        <option value="Неявка">Неявка</option>
+      </select>
+    </label>
+
+    <button id="resetFilters">Сбросить фильтры</button>
+  </section>
+
+  <section id="summary">
+    <h2>Статистика по отбору</h2>
+    <p>Всего записей: <span id="totalCount">0</span></p>
+    <p>Завершено: <span id="completedCount">0</span></p>
+    <p>Отменено: <span id="cancelledCount">0</span></p>
+    <p>Неявки: <span id="noShowCount">0</span></p>
+  </section>
+
+  <section id="tableSection">
+    <table>
+      <thead>
+        <tr>
+          <th>Дата</th>
+          <th>Время</th>
+          <th>Врач</th>
+          <th>Специальность</th>
+          <th>Кабинет</th>
+          <th>Тип пациента</th>
+          <th>Статус</th>
+        </tr>
+      </thead>
+      <tbody id="appointmentsTableBody">
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
