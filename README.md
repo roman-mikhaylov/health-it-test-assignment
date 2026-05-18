@@ -41,7 +41,7 @@
 
 Страница развернута на GitHub Pages:
 
-- Demo: `https://roman-mikhaylov.github.io/health-it-test-assignment/`  
+- Demo: https://roman-mikhaylov.github.io/health-it-test-assignment/ 
   (корневой `index.html` редиректит на `task1-web-schedule/`).
 
 Запуск локально
