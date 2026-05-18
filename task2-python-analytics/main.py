@@ -7,12 +7,24 @@ import pandas as pd
 DATA_FILE = Path("appointments.json")
 OUTPUT_FILE = Path("doctor_day_stats.csv")
 
-
 def load_appointments_from_file(path: Path) -> pd.DataFrame:
-  with path.open(encoding="utf-8") as f:
-    data = json.load(f)
-  df = pd.DataFrame(data)
-  return df
+    if not path.exists():
+        raise FileNotFoundError(f"Data file not found: {path}")
+    try:
+        with path.open(encoding="utf-8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Invalid JSON in {path}: {e}") from e
+    df = pd.DataFrame(data)
+    return df
+
+
+
+#def load_appointments_from_file(path: Path) -> pd.DataFrame:
+#  with path.open(encoding="utf-8") as f:
+#    data = json.load(f)
+#  df = pd.DataFrame(data)
+#  return df
 
 
 def calculate_duration(start_time: str, end_time: str) -> int:
@@ -53,13 +65,24 @@ def aggregate_by_doctor_and_day(df: pd.DataFrame) -> pd.DataFrame:
 def save_stats_to_csv(df: pd.DataFrame, path: Path) -> None:
   df.to_csv(path, index=False, encoding="utf-8-sig")
 
-
 def main():
-  df = load_appointments_from_file(DATA_FILE)
-  df = preprocess_df(df)
-  stats = aggregate_by_doctor_and_day(df)
-  save_stats_to_csv(stats, OUTPUT_FILE)
-  print(f"Saved stats to {OUTPUT_FILE.resolve()}")
+    try:
+        df = load_appointments_from_file(DATA_FILE)
+        df = preprocess_df(df)
+        stats = aggregate_by_doctor_and_day(df)
+        save_stats_to_csv(stats, OUTPUT_FILE)
+        print(f"Saved stats to {OUTPUT_FILE.resolve()}")
+    except Exception as e:
+        print(f"Error during processing: {e}")
+
+
+
+#def main():
+#  df = load_appointments_from_file(DATA_FILE)
+#  df = preprocess_df(df)
+#  stats = aggregate_by_doctor_and_day(df)
+#  save_stats_to_csv(stats, OUTPUT_FILE)
+#  print(f"Saved stats to {OUTPUT_FILE.resolve()}")
 
 
 if __name__ == "__main__":
