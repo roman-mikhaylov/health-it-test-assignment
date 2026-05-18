@@ -20,7 +20,7 @@ const appointments = [
     room: "101",
     patientType: "Повторный",
     status: "Завершён"
-  }
+  },
   {
     appointmentId: "A003",
     doctorName: "Петров О.В.",
@@ -31,7 +31,7 @@ const appointments = [
     room: "102",
     patientType: "Первичный",
     status: "Отменен"
-  }
+  },
   {
     appointmentId: "A004",
     doctorName: "Иванов И.И.",
