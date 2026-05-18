@@ -142,7 +142,8 @@ docker run --rm -v "$(pwd)/task2-python-analytics:/app" health-it-analytics
 Ссылка на таблицу
 -----------------
 
-- Google Sheet (просмотр): ссылка на таблицу `Health IT Test – Daily Visits` с правом чтения была предоставлена в отклике на задание.
+- Google Sheet (просмотр): ссылка на таблицу `Health IT Test – Daily Visits` с правом чтения была предоставлена в отклике на задание
+- https://docs.google.com/spreadsheets/d/1EiYH9lW-1g7xvJB6SJQ25mAI_YcgbS5vRVDK-9HsGLg/edit?usp=sharing
 
 ---
 
